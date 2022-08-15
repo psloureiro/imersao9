@@ -28,6 +28,8 @@ services:
   pgadmin:
     image: dpage/pgadmin4
     tty: true
+    volumes:
+      - .pgadmin4:/var/lib/pgadmin
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@user.com
       - PGADMIN_DEFAULT_PASSWORD=123456
