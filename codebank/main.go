@@ -3,9 +3,9 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"github.com/codeedu/codebank/domain"
-	"github.com/codeedu/codebank/infrastructure/repository"
-	"github.com/codeedu/codebank/usecase"
+	"github.com/psloureiro/codebank/domain"
+	"github.com/psloureiro/codebank/infrastructure/repository"
+	"github.com/psloureiro/codebank/usecase"
 	_ "github.com/lib/pq"
 	"log"
 )
@@ -16,9 +16,9 @@ func main() {
 
 	cc := domain.NewCreditCard()
 	cc.Number = "1234"
-	cc.Name = "Wesley"
-	cc.ExpirationYear = 2021
-	cc.ExpirationMonth = 7
+	cc.Name = "Paulo Loureiro"
+	cc.ExpirationYear = 2022
+	cc.ExpirationMonth = 12
 	cc.CVV = 123
 	cc.Limit = 1000
 	cc.Balance = 0

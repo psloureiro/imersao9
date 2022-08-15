@@ -1,3 +1,5 @@
+// Data Transfer Object
+
 package dto
 
 import "time"
