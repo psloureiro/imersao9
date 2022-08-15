@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"github.com/codeedu/codebank/domain"
-	"github.com/codeedu/codebank/dto"
+	"github.com/psloureiro/codebank/domain"
+	"github.com/psloureiro/codebank/dto"
 	"time"
 )
 
