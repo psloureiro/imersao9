@@ -1,9 +1,9 @@
 package server
 
 import (
-	"github.com/codeedu/codebank/infrastructure/grpc/pb"
-	"github.com/codeedu/codebank/infrastructure/grpc/service"
-	"github.com/codeedu/codebank/usecase"
+	"github.com/psloureiro/codebank/infrastructure/grpc/pb"
+	"github.com/psloureiro/codebank/infrastructure/grpc/service"
+	"github.com/psloureiro/codebank/usecase"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"log"
@@ -21,7 +21,7 @@ func NewGRPCServer() GRPCServer {
 func (g GRPCServer) Serve() {
 	lis, err := net.Listen("tcp","0.0.0.0:50052")
 	if err != nil {
-		log.Fatalf("could not listen tpc port")
+		log.Fatalf("could not listen tcp port")
 	}
 	transactionService := service.NewTransactionService()
 	transactionService.ProcessTransactionUseCase = g.ProcessTransactionUseCase

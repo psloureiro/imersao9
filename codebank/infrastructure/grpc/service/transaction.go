@@ -2,9 +2,9 @@ package service
 
 import (
 	"context"
-	"github.com/codeedu/codebank/dto"
-	"github.com/codeedu/codebank/infrastructure/grpc/pb"
-	"github.com/codeedu/codebank/usecase"
+	"github.com/psloureiro/codebank/dto"
+	"github.com/psloureiro/codebank/infrastructure/grpc/pb"
+	"github.com/psloureiro/codebank/usecase"
 	"github.com/golang/protobuf/ptypes/empty"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

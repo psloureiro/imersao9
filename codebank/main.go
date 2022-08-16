@@ -5,17 +5,13 @@ package main
 import (
 	"database/sql"
 	"fmt"
-<<<<<<< HEAD
 	"github.com/psloureiro/codebank/domain"
 	"github.com/psloureiro/codebank/infrastructure/repository"
 	"github.com/psloureiro/codebank/usecase"
-=======
-	"github.com/codeedu/codebank/infrastructure/grpc/server"
-	"github.com/codeedu/codebank/infrastructure/kafka"
-	"github.com/codeedu/codebank/infrastructure/repository"
-	"github.com/codeedu/codebank/usecase"
+	"github.com/psloureiro/codebank/infrastructure/grpc/server"
+	"github.com/psloureiro/codebank/infrastructure/kafka"
+	"github.com/psloureiro/codebank/infrastructure/repository"
 	"github.com/joho/godotenv"
->>>>>>> 1c07ef8b974acf316b1f8ac7f757ae31d87fde26
 	_ "github.com/lib/pq"
 	"log"
 	"os"
@@ -31,27 +27,9 @@ func init() {
 func main() {
 	db := setupDb()
 	defer db.Close()
-<<<<<<< HEAD
-
-	cc := domain.NewCreditCard()
-	cc.Number = "1234"
-	cc.Name = "Paulo Loureiro"
-	cc.ExpirationYear = 2022
-	cc.ExpirationMonth = 12
-	cc.CVV = 123
-	cc.Limit = 1000
-	cc.Balance = 0
-
-	repo := repository.NewTransactionRepositoryDb(db)
-	err := repo.CreateCreditCard(*cc)
-	if err != nil {
-		fmt.Println(err)
-	}
-=======
 	producer := setupKafkaProducer()
 	processTransactionUseCase := setupTransactionUseCase(db, producer)
 	serveGrpc(processTransactionUseCase)
->>>>>>> 1c07ef8b974acf316b1f8ac7f757ae31d87fde26
 }
 
 func setupTransactionUseCase(db *sql.DB, producer kafka.KafkaProducer) usecase.UseCaseTransaction {

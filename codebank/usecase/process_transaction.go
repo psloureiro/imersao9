@@ -1,16 +1,11 @@
 package usecase
 
 import (
-<<<<<<< HEAD
 	"github.com/psloureiro/codebank/domain"
 	"github.com/psloureiro/codebank/dto"
-=======
+	"github.com/psloureiro/codebank/infrastructure/kafka"
 	"encoding/json"
-	"github.com/codeedu/codebank/domain"
-	"github.com/codeedu/codebank/dto"
-	"github.com/codeedu/codebank/infrastructure/kafka"
 	"os"
->>>>>>> 1c07ef8b974acf316b1f8ac7f757ae31d87fde26
 	"time"
 )
 
