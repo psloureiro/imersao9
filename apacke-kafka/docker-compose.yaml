@@ -42,3 +42,8 @@ services:
       CONTROL_CENTER_BOOTSTRAP_SERVERS: 'kafka:9092'
       CONTROL_CENTER_REPLICATION_FACTOR: 1
       PORT: 9021
+      
+networks:
+  default:
+    name: codebank_default
+    external: true

@@ -5,8 +5,6 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"github.com/psloureiro/codebank/domain"
-	"github.com/psloureiro/codebank/infrastructure/repository"
 	"github.com/psloureiro/codebank/usecase"
 	"github.com/psloureiro/codebank/infrastructure/grpc/server"
 	"github.com/psloureiro/codebank/infrastructure/kafka"
